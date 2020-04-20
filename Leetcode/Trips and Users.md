@@ -1,6 +1,6 @@
 ### Question Link: [leedcode/Trips and Users](https://leetcode.com/problems/trips-and-users/)
 
-**Solution**
+## Solution
 ```sql
 SELECT    Request_at AS 'Day',
           round(IFNULL(SUM(CASE WHEN LEFT(Status,9) = 'cancelled' THEN 1 ELSE 0 END)/COUNT(*),0),2) AS 'Cancellation Rate'
@@ -11,19 +11,19 @@ WHERE     Client_Id IN (SELECT Users_Id FROM Users WHERE Banned='No') AND
 GROUP BY  Request_at
 ```
 
-**Frequently used code**
+## Frequently used code
 
 
-_LEFT function_
+*LEFT function
 
-LEFT(string, number_of_chars) 
+**LEFT(string, number_of_chars) 
 
-Extract 3 characters from a string (starting from left)
+**Extract 3 characters from a string (starting from left)
 
-Here left function assigns value to 'cancelled trip' in an easy way.
+**Here left function assigns value to 'cancelled trip' in an easy way.
 
-*IFNULL function*
+*IFNULL function
 
-IFNULL(expression, alt_value)
+**IFNULL(expression, alt_value)
 
-The IFNULL() function returns a specified value if the expression is NULL.
+**The IFNULL() function returns a specified value if the expression is NULL.
