@@ -10,7 +10,7 @@ WHERE     Client_Id IN (SELECT Users_Id FROM Users WHERE Banned='No') AND
           Request_at BETWEEN '2013-10-01' AND '2013-10-03'
 GROUP BY  Request_at
 
-**Frequently used code**
+*******Frequently used code******
 _LEFT function_
 LEFT(string, number_of_chars) 
 Extract 3 characters from a string (starting from left)
