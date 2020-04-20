@@ -20,8 +20,6 @@ LEFT(string, number_of_chars)
 
 Extract 3 characters from a string (starting from left)
 
-Here left function assigns value to 'cancelled trip' in an easy way.
-
 _IFNULL function_
 
 IFNULL(expression, alt_value)
