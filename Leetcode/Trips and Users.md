@@ -14,7 +14,7 @@ GROUP BY  Request_at
 ## Frequently used code
 
 
-*LEFT function
+_LEFT function_
 
 **LEFT(string, number_of_chars) 
 
@@ -22,7 +22,7 @@ GROUP BY  Request_at
 
 **Here left function assigns value to 'cancelled trip' in an easy way.
 
-*IFNULL function
+_IFNULL function_
 
 **IFNULL(expression, alt_value)
 
