@@ -11,7 +11,7 @@ WHERE     Client_Id IN (SELECT Users_Id FROM Users WHERE Banned='No') AND
 GROUP BY  Request_at
 
 **Frequently used code**
-*LEFT function*
+_LEFT function_
 LEFT(string, number_of_chars) 
 Extract 3 characters from a string (starting from left)
 Here left function assigns value to 'cancelled trip' in an easy way.
