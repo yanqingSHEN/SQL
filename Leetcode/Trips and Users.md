@@ -1,6 +1,6 @@
 ### Question Link: [leedcode/Trips and Users](https://leetcode.com/problems/trips-and-users/)
 
-**Solution**
+## Solution 
 ```sql
 SELECT    Request_at AS 'Day',
           round(IFNULL(SUM(CASE WHEN LEFT(Status,9) = 'cancelled' THEN 1 ELSE 0 END)/COUNT(*),0),2) AS 'Cancellation Rate'
@@ -10,8 +10,8 @@ WHERE     Client_Id IN (SELECT Users_Id FROM Users WHERE Banned='No') AND
           Request_at BETWEEN '2013-10-01' AND '2013-10-03'
 GROUP BY  Request_at
 
-*******Frequently used code******
-_LEFT function_
+## Frequently used code 
+_ LEFT function _
 LEFT(string, number_of_chars) 
 Extract 3 characters from a string (starting from left)
 Here left function assigns value to 'cancelled trip' in an easy way.
