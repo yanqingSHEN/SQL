@@ -20,6 +20,7 @@ _LEFT function_
 
 Extract 3 characters from a string (starting from left)
 
+
 _IFNULL function_
 
 **IFNULL(expression, alt_value)**
