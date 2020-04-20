@@ -16,14 +16,14 @@ GROUP BY  Request_at
 
 _LEFT function_
 
-**LEFT(string, number_of_chars) 
+LEFT(string, number_of_chars) 
 
-**Extract 3 characters from a string (starting from left)
+Extract 3 characters from a string (starting from left)
 
-**Here left function assigns value to 'cancelled trip' in an easy way.
+Here left function assigns value to 'cancelled trip' in an easy way.
 
 _IFNULL function_
 
-**IFNULL(expression, alt_value)
+IFNULL(expression, alt_value)
 
-**The IFNULL() function returns a specified value if the expression is NULL.
+The IFNULL() function returns a specified value if the expression is NULL.
