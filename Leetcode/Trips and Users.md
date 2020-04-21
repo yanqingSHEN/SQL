@@ -19,7 +19,7 @@ _LEFT function_
 **LEFT(string, number_of_chars)**
 
 Extract 3 characters from a string (starting from left)
-
+Here easily get cancelled orders
 
 _IFNULL function_
 
