@@ -18,3 +18,9 @@ _COALSECE Function_
 The COALESCE() function returns the first non-null value in a list.
 
 We need COALESCE here because there may be null value for us to consider.
+
+
+_OFFSET Function_
+
+OFFSET excludes the first set of records.
+OFFSET can only be used with an ORDER BY clause.
