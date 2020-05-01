@@ -10,3 +10,10 @@ INNER JOIN  Logs AS L3
 ON          L2.Id = L3.Id-1
 WHERE       L1.Num = L2.Num AND L1.Num = L3.Num
 ```
+
+##  Frequently used code
+
+_Distinct Function_
+
+
+The SELECT DISTINCT statement is used to return only distinct (different) values.
