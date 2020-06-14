@@ -35,6 +35,7 @@ WHERE  max_score=1
 GROUP BY hacker_id,name 
 HAVING sum(score) != 0
 ORDER BY sum_score DESC,hacker_id
+```
 
 ## Logic
 First find the maximum score for each challenge of everyone, and then sum the max score. Finally join with the other table to get names.
