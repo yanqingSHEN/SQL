@@ -1,7 +1,7 @@
 ### Question Link: [Hackerrank/Ollivander's Inventory](https://www.hackerrank.com/challenges/harry-potter-and-wands/problem)
 
 
-## Solution
+##  Solution 1
 ```sql
 WITH T1 AS(
 SELECT      W2.code,W1.power,MIN(coins_needed) AS Minc
@@ -17,6 +17,21 @@ ON          T1.code = W3.code AND T1.power = W3.power AND T1.Minc = W3.coins_nee
 INNER JOIN  Wands_Property AS W4
 ON          T1.code = W4.code
 ORDER BY    T1.power DESC,W4.age DESC
+```
+
+##  Solution 2
+```sql
+WITH T1 AS (
+SELECT id,age,coins_needed,power,
+       ROW_NUMBER() OVER (PARTITION BY age,power ORDER BY coins_needed) as cheap
+FROM   Wands
+INNER JOIN Wands_Property
+ON     Wands.code = Wands_Property.code
+WHERE  is_evil = 0)
+SELECT id,age,coins_needed,power
+FROM   T1
+WHERE  cheap = 1
+ORDER BY power DESC,age DESC
 ```
 
 ## Logic
