@@ -7,10 +7,10 @@ SELECT title,name
 FROM   movie JOIN casting ON movie.id=movieid
              JOIN actor   ON actorid=actor.id
 WHERE  movie.id IN
-(
-SELECT movieid FROM casting JOIN movie ON movieid=id
-WHERE actorid IN (
-  SELECT id FROM actor
-  WHERE name='Julie Andrews'))
+(  SELECT movieid 
+   FROM casting JOIN movie ON movieid=id
+   WHERE actorid IN (
+                      SELECT id FROM actor
+                      WHERE name='Julie Andrews'))
 AND ord = 1
 ```
