@@ -1,6 +1,6 @@
 ### Link: (https://sqlzoo.net/wiki/More_JOIN_operations)
 
-#   Q:List the film title and the leading actor for all of the films 'Julie Andrews' played in.
+    Q:List the film title and the leading actor for all of the films 'Julie Andrews' played in.
 
 ```sql
 SELECT title,name
