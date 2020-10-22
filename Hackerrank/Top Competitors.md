@@ -12,7 +12,7 @@ INNER JOIN Challenges AS C
 ON     S.challenge_id = C.challenge_id
 INNER JOIN  Difficulty AS D
 ON     C.difficulty_level = D.difficulty_level
-WHERE  S.Score=D.score AND C.difficulty_level = D.difficulty_level
+WHERE  C.difficulty_level = D.difficulty_level
 GROUP BY H.hacker_id,H.name
 HAVING count(H.hacker_id)>1
 order by count(H.hacker_id) desc, H.hacker_id asc
