@@ -1,6 +1,6 @@
 ### Question Link: [Hackerrank/Challenges](https://www.hackerrank.com/challenges/challenges/problem)
 
-##  Solution 1
+##  Solution 
 
 ```sql
 SELECT H.hacker_id,H.name,count(challenge_id) as nu
