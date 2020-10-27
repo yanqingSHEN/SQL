@@ -37,5 +37,21 @@ HAVING sum(score) != 0
 ORDER BY sum_score DESC,hacker_id
 ```
 
+
+## Solution 3
+```sql
+SELECT Sub.hacker_id,name,sum(real_score)
+FROM  (
+SELECT S.hacker_id,challenge_id,MAX(score) AS real_score
+FROM   Submissions AS S
+GROUP BY S.hacker_id,challenge_id) AS Sub
+INNER JOIN Hackers as H
+ON    Sub.hacker_id = H.hacker_id
+GROUP BY Sub.hacker_id,name
+HAVING   sum(real_score) != 0
+ORDER BY sum(real_score) DESC,Sub.hacker_id
+```
+
+
 ## Logic
 First find the maximum score for each challenge of everyone, and then sum the max score. Finally join with the other table to get names.
