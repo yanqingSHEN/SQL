@@ -1,4 +1,4 @@
-### Question Link: [leetcode/my_numbers](https://leetcode.com/problems/biggest-single-number/)
+### Question Link: [leetcode/Biggest Single Number](https://leetcode.com/problems/biggest-single-number/)
 
 ## Solution 1
 ```sql
