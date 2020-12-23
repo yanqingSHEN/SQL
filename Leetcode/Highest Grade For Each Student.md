@@ -26,3 +26,6 @@ WHERE      sub1.student_id = E2.student_id) AS sub2
 GROUP BY   student_id,grade
 ORDER BY   student_id
 ```
+
+## Logic
+First find out for each student, what is the maximum grade. Then if there is a tie between two courses, find out the minimum couseid for the pair of student and grade. Window funtion could finish the two steps at the same time, while using plain join cluase requires several subqueries.
