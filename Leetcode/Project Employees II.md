@@ -20,7 +20,7 @@ FROM   Project P
 GROUP BY project_id
 HAVING COUNT(*) = (SELECT MAX(num) FROM (SELECT COUNT(*) OVER(PARTITION BY project_id) AS num
                    FROM   Project) AS sub)
-                   
+```                   
                    
 ## The following DOESN'T work
 ```sql
