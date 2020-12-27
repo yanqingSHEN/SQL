@@ -31,4 +31,4 @@ FROM   (
 GROUP BY project_id
 HAVING COUNT(*) = MAX(num)
 ```
-In the outer query, the max(num) for each group(project) is exactly the num for that group. So this way doesn't output what we want.
+Group by Clause is executed before Having Clause. In the outer query, the max(num) for each group(project) is exactly the num for that group. So this way doesn't output what we want.
