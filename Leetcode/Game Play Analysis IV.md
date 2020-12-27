@@ -1,4 +1,4 @@
-### Game Play Analysis IV[leetcode/Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv/)
+### Game Play Analysis IV [leetcode/Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv/)
 
 ```sql
 SELECT      ROUND(COUNT(*)/(SELECT COUNT(DISTINCT player_id) FROM Activity),2) AS fraction
