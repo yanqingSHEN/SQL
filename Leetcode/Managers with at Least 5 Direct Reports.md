@@ -22,7 +22,7 @@ INNER JOIN
            GROUP BY ManagerID
            HAVING   COUNT(*) >=5) AS sub
 ON         E.Id = sub.ManagerId
-
+```
 
 ##   Solution 3 Join two tables & Window Function
 ```sql
