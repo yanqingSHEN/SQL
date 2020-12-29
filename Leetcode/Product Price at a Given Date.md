@@ -1,4 +1,4 @@
-### Question Link:[leetcode/Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date/)
+### Question Link: [Leetcode/Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date/)
 
 ```sql
 SELECT  product_id,10 AS price
