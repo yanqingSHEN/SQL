@@ -2,18 +2,15 @@
 
 ##  Solution
 ```sql
-SELECT      customer_id,customer_name
-FROM(
-SELECT      Customers.customer_id,customer_name,
-            CASE WHEN product_name = 'A' or product_name = 'B' THEN 1
-            ELSE 0
-            END AS    test_AB,
-            CASE WHEN product_name = 'C' THEN 1
-            ELSE 0
-            END AS    test_C
-FROM        Customers
-INNER JOIN  Orders
-ON          Customers.customer_id = Orders.customer_id) AS SubQ
-GROUP BY    customer_id,customer_name
-HAVING      sum(test_AB) = 2 AND sum(test_C) = 0
+SELECT   customer_id,customer_name
+FROM  (
+SELECT   C.customer_id,customer_name,
+         CASE WHEN product_name = 'A' THEN 1 ELSE 0 END AS check_A,
+         CASE WHEN product_name = 'B' THEN 1 ELSE 0 END AS check_B,
+         CASE WHEN product_name = 'C' THEN 1 ELSE 0 END AS check_C
+FROM     Orders O
+INNER JOIN Customers C
+ON       O.customer_id = C.customer_id) AS sub
+GROUP BY customer_id,customer_name
+HAVING   sum(check_A) != 0 AND sum(check_B) !=0 AND sum(check_C)=0
 ```
