@@ -2,18 +2,19 @@
 
 
 ```sql
-SELECT      book_id,name
+SELECT      sub.book_id,name
 FROM        (
-            SELECT      sub.book_id,name,
-                        SUM (CASE WHEN dispatch_date BETWEEN '2018-06-23' AND '2019-06-23' 
-                        THEN quantity ELSE 0 END) AS q
-            FROM        (
-                         SELECT      B.book_id,name
-                         FROM        Books B
-                         WHERE       available_from < '2019-05-23') AS sub1
-            LEFT JOIN   Orders O
-            ON          sub.book_id = O.book_id
-            GROUP BY    sub.book_id,name) AS sub2
-WHERE       q <10
-
+             SELECT      B.book_id,name
+             FROM        Books B
+             WHERE       available_from < '2019-05-23') AS sub
+LEFT JOIN   Orders O
+ON          sub.book_id = O.book_id AND 
+            dispatch_date BETWEEN '2018-06-23' AND '2019-06-23'
+GROUP BY    sub.book_id,name
+HAVING      SUM(IFNULL(quantity,0)) < 10
 ```
+
+
+##   Learning
+1. Use LEFT JOIN to make sure all books that are available longer than 1 month are included
+2. User IFNULL to replace the null value of books that don't have sales in the past year
