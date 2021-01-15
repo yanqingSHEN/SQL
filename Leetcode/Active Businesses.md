@@ -1,4 +1,4 @@
-###  Question Link:[Leetcode/Active Businesses](https://leetcode.com/problems/active-businesses/)
+###  Question Link: [Leetcode/Active Businesses](https://leetcode.com/problems/active-businesses/)
 
 
 ```sql
