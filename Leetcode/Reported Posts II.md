@@ -1,4 +1,4 @@
-###  Question Link:[Leetcode/Reported Posts II](https://leetcode.com/problems/reported-posts-ii/)
+###  Question Link: [Leetcode/Reported Posts II](https://leetcode.com/problems/reported-posts-ii/)
 
 
 ```sql
